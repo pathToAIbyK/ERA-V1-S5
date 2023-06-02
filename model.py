@@ -1,3 +1,6 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 #Model of the Neural Network
 class Net(nn.Module):
     #This defines the structure of the NN.
@@ -11,9 +14,9 @@ class Net(nn.Module):
         self.fc2 = nn.Linear(50, 10)
 
     def forward(self, x):
-        x = F.relu(self.conv1(x), 2)
+        x = F.relu(self.conv1(x))
         x = F.relu(F.max_pool2d(self.conv2(x), 2)) 
-        x = F.relu(self.conv3(x), 2)
+        x = F.relu(self.conv3(x))
         x = F.relu(F.max_pool2d(self.conv4(x), 2)) 
         x = x.view(-1, 4096)
         x = F.relu(self.fc1(x))
