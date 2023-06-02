@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from torchvision import datasets, transforms
+import torchvision.transforms as transforms
+import torchvision.datasets as datasets
 
 # Train data transformations
 train_transforms = transforms.Compose([
