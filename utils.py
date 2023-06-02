@@ -28,7 +28,7 @@ batch_size = 512
 
 kwargs = {'batch_size': batch_size, 'shuffle': True, 'num_workers': 2, 'pin_memory': True}
 
-test_loader = torch.utils.data.DataLoader(train_data, **kwargs)
+test_loader = torch.utils.data.DataLoader(test_data, **kwargs)
 train_loader = torch.utils.data.DataLoader(train_data, **kwargs)
 
 # Data to plot accuracy and loss graphs
