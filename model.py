@@ -1,6 +1,3 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
 #Model of the Neural Network
 class Net(nn.Module):
     #This defines the structure of the NN.
