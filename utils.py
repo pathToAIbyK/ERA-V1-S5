@@ -1,3 +1,9 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from torchvision import datasets, transforms
+
 # Train data transformations
 train_transforms = transforms.Compose([
     transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1),
